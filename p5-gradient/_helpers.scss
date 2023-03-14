@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+$font1: 'Poppins', sans-serif;
+$font2: 'Lobster Two', cursive;
+
+$white:#fff;
+$black:#000;
+
+$primary-light: #f9fafb;
+$second-light:#f0f0f0;
+$third-light:#DADBDB;
+
+$primary-dark:#222;
+
+$primary-grey:#777;
+$second-grey:#4f4f4f;
+
+$first-dark-shadow: rgba(0,0,0,0.3);
+$first-white-shadow: rgba(255,255,255,0.3);
+
+$success: rgba(61, 168, 102, 0.6);
+$error: rgba(168, 30, 14, 0.6);
+
+$primary-color:#4c8061;
+
+@mixin reset() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: $font1;
+  }
+
+@mixin flexDisplay($vertical, $horizontal, $direction, $wrap) {
+    display: flex;
+    align-items: $vertical;
+    justify-content: $horizontal;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin absolute_top-left($top, $left) {
+    position: absolute;
+      top: $top;
+      left: $left;
+}
+
+@mixin relativeInit_w-h($width, $height) {
+    position: relative;
+      width: $width;
+      height: $height;
+}
+
+@mixin w-h($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin breakpoint($pixelSize) {
+        @media (min-width: $pixelSize/16+em){
+            @content;
+        }
+  }
+
+@mixin queryWidth($pixelSize) {
+  @if $pixelSize == 320 {
+      @media (min-width: 20em){
+          @content;
+      }
+  }
+  @if $pixelSize == 640 {
+      @media (min-width: 40em){
+          @content;
+      }
+  }
+  @if $pixelSize == 768 {
+      @media (min-width: 47.5em){
+          @content;
+      }
+  }
+}

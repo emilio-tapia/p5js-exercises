@@ -4,7 +4,9 @@ const mult = 0.001;
 let max;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canv = createCanvas(windowWidth, windowHeight);
+
+  canv.mousePressed(setup); // each click changes the art
   background(30);
   angleMode(RADIANS);
   noiseDetail(0);
@@ -58,4 +60,11 @@ function draw() {
   }
 
   console.log(pointsArr);
+}
+
+// Save art as jpg.
+function keyTyped() {
+  if (key === 's') {
+    save('myCanvas.jpg');
+  }
 }

@@ -1,0 +1,32 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-light;
+// overflow: hidden;
+
+// @include flexDisplay(center, center, column, wrap)
+
+// height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

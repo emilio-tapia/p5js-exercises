@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #f9fafb;
+}
+
+/* -------- TYPE SELECTORS --------- */
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

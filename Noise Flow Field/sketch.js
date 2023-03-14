@@ -6,7 +6,9 @@ let mult, max;
 let r1, r2, r3;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canv = createCanvas(windowWidth, windowHeight);
+
+  canv.mousePressed(setup); // each click changes the art
   background(40);
   angleMode(RADIANS);
   noiseDetail(1);
@@ -62,5 +64,12 @@ function draw() {
 
     if (dist(width / 2, height / 2, pointsArr[i].x, pointsArr[i].y) < 300)
       ellipse(pointsArr[i].x, pointsArr[i].y, radius);
+  }
+}
+
+// Save art as jpg.
+function keyTyped() {
+  if (key === 's') {
+    save('myCanvas.jpg');
   }
 }

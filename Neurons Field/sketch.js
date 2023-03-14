@@ -4,7 +4,10 @@ let max; // Maximun Iterations
 let r1, r2, r3; // Random Variable Color
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canv = createCanvas(windowWidth, windowHeight);
+
+  canv.mousePressed(setup); // each click changes the art
+
   background(40);
   angleMode(DEGREES);
   // noiseDetail(1);
@@ -98,6 +101,13 @@ function draw() {
   }
 }
 
-function doubleClicked() {
-  saveCanvas('flowfield', 'png');
+// function doubleClicked() {
+//   saveCanvas('flowfield', 'png');
+// }
+
+// Save art as jpg.
+function keyTyped() {
+  if (key === 's') {
+    save('myCanvas.jpg');
+  }
 }
